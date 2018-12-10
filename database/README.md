@@ -1,0 +1,1 @@
+Database can be created by running docker-compose up. This will create a database called smashlounge with a default root password of secret.

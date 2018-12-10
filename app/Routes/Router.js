@@ -1,15 +1,17 @@
 const CharController = require('../Controller/CharController.js');
 const TechController = require('../Controller/CharController.js');
 const HomeController = require('../Controller/HomeController.js');
+const DatabaseConnection = require('../Database/DatabaseConnection');
+
 
 module.exports = class Router {
     constructor() {
-
+        this.db = new DatabaseConnection();
     }
     init(app) {
-        const home = new HomeController();
-        const char = new CharController();
-        const tech = new TechController();
+        const home = new HomeController(this.db);
+        const char = new CharController(this.db);
+        const tech = new TechController(this.db);
 
         app.get('/home', function(req, res) {
             res.json(home.get());
