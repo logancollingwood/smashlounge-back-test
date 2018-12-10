@@ -1,0 +1,22 @@
+{
+  "name": "smashlounge-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/logancollingwood/smashlounge-back.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/logancollingwood/smashlounge-back/issues"
+  },
+  "homepage": "https://github.com/logancollingwood/smashlounge-back#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
