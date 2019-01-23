@@ -1,7 +1,9 @@
 const CharController = require('../Controller/CharController.js');
 const TechController = require('../Controller/CharController.js');
 const HomeController = require('../Controller/HomeController.js');
-const DatabaseConnection = require('../Database/DatabaseConnection');
+import DatabaseConnection from "../Database/DatabaseConnection";
+import { Application } from "express";
+
 
 
 module.exports = class Router {
@@ -10,7 +12,9 @@ module.exports = class Router {
     constructor() {
         this.db = new DatabaseConnection();
     }
-    init(app) {
+
+    public init(app : Application) {
+
         const home = new HomeController(this.db);
         const char = new CharController(this.db);
         const tech = new TechController(this.db);
