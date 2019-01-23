@@ -5,6 +5,8 @@ const DatabaseConnection = require('../Database/DatabaseConnection');
 
 
 module.exports = class Router {
+    public db
+    
     constructor() {
         this.db = new DatabaseConnection();
     }

@@ -1,5 +1,5 @@
 require('dotenv').load();
-const Router = require('./app/Routes/Router.js');
+const Router = require('./src/app/Routes/Router.js');
 const express = require('express')
 const app = express()
 const port = 3000
